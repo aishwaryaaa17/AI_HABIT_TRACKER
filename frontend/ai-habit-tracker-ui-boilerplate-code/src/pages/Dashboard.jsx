@@ -282,13 +282,13 @@ export default function Dashboard() {
         />
       )}
 
-      <+
+      <SumaryCards
         totalHabits={habits.length}
-        activeStreaks={activeStreaks}
-        bestStreak={bestStreak}
+        atStreak={bestStreak}
         weekRate={weekRate}
       />
-
+ctiveStreaks={activeStreaks}
+        bes
       <div className="card p-5">
         <div className="flex items-center justify-between mb-4">
           <div>
