@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Plus, Lightbulb } from "lucide-react";
+import { Plus, Lightbulb, FileText } from "lucide-react";
 import api from "../api/axios.js";
 import Modal from "../components/Modal.jsx";
 import HabitForm from "../components/HabitForm.jsx";
@@ -16,6 +16,7 @@ import LoadingSpinner from "../components/LoadingSpinner.jsx";
 import { celebrate, celebrateBig } from "../utils/confetti.js";
 import { streakFromKeys, todayKey, weekKeys } from "../utils/dateHelpers.js";
 import { useAuth } from "../context/AuthContext.jsx";
+
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -282,13 +283,12 @@ export default function Dashboard() {
         />
       )}
 
-      <SummaryCards
-        totalHabits={habits.length}
-        atStreak={bestStreak}
-        weekRate={weekRate}
-      />
-ctiveStreaks={activeStreaks}
-        bes
+    <SummaryCards
+  totalHabits={habits.length}
+  activeStreaks={activeStreaks}
+  bestStreak={bestStreak}
+  weekRate={weekRate}
+/>
       <div className="card p-5">
         <div className="flex items-center justify-between mb-4">
           <div>
@@ -345,6 +345,10 @@ ctiveStreaks={activeStreaks}
 
       <AIWeeklyReport />
 
+      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center shadow-lg">
+  <FileText size={22} />
+</div>
+
       <div className="grid lg:grid-cols-12 gap-5">
         <div className="col-span-8">
           <WeeklyGrid habits={habits} logsByHabit={weekLogsByHabit} />
@@ -391,7 +395,7 @@ ctiveStreaks={activeStreaks}
             Cancel
           </button>
           <button
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 hover:bg-red-700 from-rose-500 to-red-600 px-4 py-2.5 text-sm font-medium text-white hover:brightness-110 shadow-lg shadow-rose-500/30 transition"
+           className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-red-700 transition"
             onClick={() => deleteHabit(deleteTarget)}
           >
             Delete
