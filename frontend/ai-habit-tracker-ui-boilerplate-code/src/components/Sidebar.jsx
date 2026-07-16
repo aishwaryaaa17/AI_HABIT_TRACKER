@@ -49,14 +49,17 @@ export default function Sidebar() {
 
   return (
     <aside className="hidden md:flex md:flex-col w-64 fixed inset-y-0 left-0 z-30 glass border-r">
-      <div className="px-6 py-5 border-b divider">
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
-            <Sparkles size={18} />
-          </div>
-          <div className="font-semibold text-lg tracking-tight">AI Habit Tracker</div>
-        </div>
-      </div>
+      <div className="px-6 py-6 border-b divider">
+  <div>
+    <h1 className="text-xl font-bold tracking-tight">
+      HabitFlow
+    </h1>
+
+    <p className="text-xs text-faint mt-1">
+      Build consistency every day
+    </p>
+  </div>
+</div>
 
       <nav className="flex-1 px-3 py-4 space-y-1">
         {nav.map(({ to, label, icon: Icon }) => (
@@ -64,8 +67,8 @@ export default function Sidebar() {
             key={to}
             to={to}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition ${isActive
-                ? "bg-gradient-to-r from-brand-500/15 to-brand-500/5 text-brand-700 dark:text-brand-300 ring-1 ring-brand-500/20"
+              `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition ${isActive
+                ? "bg-white dark:bg-white/5 text-brand-700 dark:text-brand-300 border border-brand-500/20 shadow-sm"
                 : "text-soft hover:bg-[var(--surface-hover)]"
               }`
             }
@@ -82,7 +85,7 @@ export default function Sidebar() {
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-soft hover:bg-[var(--surface-hover)] transition"
         >
           {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          {theme === "dark" ? "Light mode" : "Dark mode"}
+          {theme === "dark" ? "Appearance" : "Dark mode"}
         </button>
 
         <button
@@ -94,7 +97,7 @@ export default function Sidebar() {
         </button>
 
         <div className="px-2 py-2 flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white font-semibold flex items-center justify-center shadow-md shadow-brand-500/30">
+          <div className="w-9 h-9 rounded-full bg-brand-600 text-white font-semibold flex items-center justify-center shadow-md shadow-brand-500/30">
             {user?.avatar || user?.name?.charAt(0).toUpperCase() || "U"}
           </div>
           <div className="flex-1 min-w-0">
