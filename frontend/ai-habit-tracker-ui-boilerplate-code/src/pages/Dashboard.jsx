@@ -282,7 +282,7 @@ export default function Dashboard() {
         />
       )}
 
-      <SumaryCards
+      <SummaryCards
         totalHabits={habits.length}
         atStreak={bestStreak}
         weekRate={weekRate}
