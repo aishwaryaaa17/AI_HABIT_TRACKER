@@ -23,7 +23,7 @@ const features = [
   },
   {
     icon: Brain,
-    title: "AI weekly insights",
+    title: "Weekly insights",
     desc: "Personalised reports on what worked, what struggled, and what to try next.",
   },
   {
@@ -33,7 +33,7 @@ const features = [
   },
   {
     icon: BarChart3,
-    title: "Beautiful statistics",
+    title: "Progress statistics",
     desc: "See patterns across days, weeks, categories — with an AI chat built-in.",
   },
 ];
@@ -74,7 +74,7 @@ export default function Landing() {
           <div className="lg:col-span-8 text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center gap-1.5 chip mb-5 bg-brand-500/15 text-brand-700 dark:text-brand-300">
               <Sparkles size={12} />
-              AI-powered habit coach
+              Build better routines
             </div>
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.08]">
               Build habits that stick,
@@ -153,7 +153,7 @@ export default function Landing() {
             <div className="relative">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300 mb-2">
                 <Sparkles size={12} />
-                AI Weekly Report
+              Weekly Summary
               </div>
               <p className="text-sm leading-relaxed">
                 Big week for hydration — 7/7 on <b>Drink 2L water</b>! Your
