@@ -12,7 +12,7 @@ const getClient = () => {
     return client;
 };
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash-lite";
+const MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
 
 export const isAIEnabled = () => !!process.env.GEMINI_API_KEY;
 
