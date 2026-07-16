@@ -77,21 +77,25 @@ export default function Landing() {
               Build better routines
             </div>
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.08]">
-              Build habits that stick,
+            The life you want,
+
               <br />
-              with an AI that actually{" "}
+              is built {" "}
               <span className="bg-gradient-to-br from-brand-400 to-brand-700 bg-clip-text text-transparent">
-                knows you
+                one habit at a time.
               </span>
               .
             </h1>
             <p className="mt-5 text-soft text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
               Track your habits, watch your streaks grow, and let AI turn your
-              data into real encouragement — not generic motivation.
+              data into real encouragement,  
+               <span className="bg-gradient-to-br from-brand-400 to-brand-700 bg-clip-text text-transparent">
+                 _not generic motivation.
+              </span>
             </p>
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
               <Link to="/register" className="btn-primary px-5 py-3 text-base">
-                Start free
+                Create Account
                 <ArrowRight size={16} />
               </Link>
               <Link to="/login" className="btn-secondary px-5 py-3 text-base">
@@ -104,8 +108,9 @@ export default function Landing() {
             <OrbitingHabits />
           </div>
         </div>
+        </section>
 
-        <div className="mt-14 md:mt-20 grid md:grid-cols-2 gap-6">
+        {/* <div className="mt-14 md:mt-20 grid md:grid-cols-2 gap-6">
           <div className="card p-6 relative overflow-hidden">
             <div className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300 mb-2">
               Today
@@ -176,7 +181,7 @@ export default function Landing() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="max-w-6xl mx-auto px-6 py-16 border-t divider">
         <div className="text-center max-w-2xl mx-auto mb-10">
@@ -184,8 +189,7 @@ export default function Landing() {
             Everything you need, nothing you don't
           </h2>
           <p className="mt-3 text-soft">
-            Clean tracking, deep stats, and AI features that understand your
-            actual data.
+           Time changes everyone. Habits decide how.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -213,17 +217,16 @@ export default function Landing() {
             }}
           />
           <div className="relative">
-            <div className="flex items-center justify-center gap-2 mb-3">
+            {/* <div className="flex items-center justify-center gap-2 mb-3">
               <Target size={18} />
               <Activity size={18} />
               <Sparkles size={18} />
-            </div>
+            </div> */}
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
               Your first streak is 3 clicks away.
             </h2>
             <p className="mt-3 text-brand-100 max-w-lg mx-auto">
-              Create your account, add a habit, check it off. That's the whole
-              onboarding.
+              Create your account, add a habit, check it off.
             </p>
             <Link
               to="/register"

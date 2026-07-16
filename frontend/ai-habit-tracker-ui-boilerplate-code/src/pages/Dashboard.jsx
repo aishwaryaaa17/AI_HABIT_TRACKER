@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Plus, Lightbulb, FileText } from "lucide-react";
+import { Plus, Lightbulb } from "lucide-react";
 import api from "../api/axios.js";
 import Modal from "../components/Modal.jsx";
 import HabitForm from "../components/HabitForm.jsx";
@@ -345,10 +345,7 @@ export default function Dashboard() {
 
       <AIWeeklyReport />
 
-      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center shadow-lg">
-  <FileText size={22} />
-</div>
-
+      
       <div className="grid lg:grid-cols-12 gap-5">
         <div className="col-span-8">
           <WeeklyGrid habits={habits} logsByHabit={weekLogsByHabit} />
