@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:8000/api",
+    baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000/api",
 });
 
 api.interceptors.request.use((config) => {
@@ -13,7 +13,7 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
     (res) => res,
     (err) => {
-        if (err.response ?.status === 401) {
+        if (err.response ? .status === 401) {
             const path = window.location.pathname;
             if (path !== "/login" && path !== "/register" && path !== "/") {
                 localStorage.removeItem("token");
