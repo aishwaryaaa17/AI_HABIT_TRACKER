@@ -47,37 +47,35 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen">
-    <header className="max-w-6xl mx-auto px-6 pt-8 pb-5 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-    <div className="flex items-center gap-2 mt-4 translate-y-5">
-  <div className="flex items-center gap-2 mt-4 translate-y-5">
-  <img
-    src={theme === "dark" ? logo : logos}
-    alt="AI Habit Tracker"
-    className="w-60 h-auto object-contain"
-  />
-</div>
-</div>
-          <span className="font-semibold text-lg"></span>
-        </div>
-        <nav className="flex items-center gap-2">
-          <button
-            onClick={toggle}
-            className="btn-ghost p-2.5"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
-          <Link to="/login" className="btn-ghost">
-            Log in
-          </Link>
-          <Link to="/register" className="btn-primary">
-            Get started
-          </Link>
-        </nav>
-      </header>
+    <header className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+  <div className="flex items-center">
+    <img
+      src={theme === "dark" ? logo : logos}
+      alt="AI Habit Tracker"
+      className="w-60 h-auto object-contain"
+    />
+  </div>
 
-      <section className="max-w-6xl mx-auto px-6 pt-8 md:pt-12 pb-10">
+  <nav className="flex items-center gap-2">
+    <button
+      onClick={toggle}
+      className="btn-ghost p-2.5"
+      aria-label="Toggle theme"
+    >
+      {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+    </button>
+
+    <Link to="/login" className="btn-ghost">
+      Log in
+    </Link>
+
+    <Link to="/register" className="btn-primary">
+      Create account
+    </Link>
+  </nav>
+</header>
+
+      <section className="max-w-6xl mx-auto px-6 pt-0 md:pt-12 pb-10">
        <div className="grid lg:grid-cols-12 gap-8 lg:gap-4 items-center">
           <div className="lg:col-span-8 text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center gap-1.5 chip mb-5 bg-brand-500/15 text-brand-700 dark:text-brand-300">
