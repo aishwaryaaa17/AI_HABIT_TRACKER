@@ -9,6 +9,7 @@ import {
   Trophy,
   ArchiveRestore,
   Sparkles,
+  Lightbulb,
 } from "lucide-react";
 import api from "../api/axios.js";
 import Modal from "../components/Modal.jsx";
@@ -138,7 +139,7 @@ export default function Habits() {
             className="btn-secondary"
             onClick={() => setSuggestOpen(true)}
           >
-            <Sparkles size={14} />
+            <Lightbulb size={14} />
             <span className="hidden sm:inline">Suggest</span>
           </button>
           <button

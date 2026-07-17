@@ -16,6 +16,8 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import Modal from "./Modal.jsx";
 import api from "../api/axios.js";
+import logos from "../assets/logot.png";
+
 
 const nav = [
   { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -51,9 +53,11 @@ export default function Sidebar() {
     <aside className="hidden md:flex md:flex-col w-64 fixed inset-y-0 left-0 z-30 glass border-r">
       <div className="px-6 py-6 border-b divider">
   <div>
-    <h1 className="text-xl font-bold tracking-tight">
-      AI Habit Tracker
-    </h1>
+    <img
+       src={logos}
+       alt="AI Habit Tracker"
+       className="w-40 h-auto object-contain"
+     />
 
     <p className="text-xs text-faint mt-1">
       Build consistency every day
@@ -85,7 +89,7 @@ export default function Sidebar() {
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-soft hover:bg-[var(--surface-hover)] transition"
         >
           {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          {theme === "dark" ? "Dark" : "Dark mode"}
+          {theme === "dark" ? "Light mode" : "Dark mode"}
         </button>
 
         <button

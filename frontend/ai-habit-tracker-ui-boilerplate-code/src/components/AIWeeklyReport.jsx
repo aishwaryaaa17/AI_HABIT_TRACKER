@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sparkles, ChevronDown, RefreshCw } from "lucide-react";
 import api from "../api/axios.js";
 import Markdown from "./Markdown.jsx";
+import logos from "../assets/logooo.png";
 
 export default function AIWeeklyReport() {
   const [expanded, setExpanded] = useState(false);
@@ -36,9 +37,11 @@ export default function AIWeeklyReport() {
         onClick={() => setExpanded((e) => !e)}
         className="w-full flex items-center gap-3 text-left relative"
       >
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white flex items-center justify-center shrink-0 shadow-lg shadow-brand-500/30">
-          <Sparkles size={18} />
-        </div>
+        <img
+           src={logos}
+           alt="AI Habit Tracker"
+           className="w-10 h-10 object-contain"
+         />
         <div className="flex-1 min-w-0">
           <div className="text-sm font-medium">AI Weekly Report</div>
           <div className="text-xs text-muted">

@@ -14,27 +14,29 @@ import {
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import OrbitingHabits from "../components/OrbitingHabits.jsx";
+import logo from "../assets/logooo.png";
+import logos from "../assets/logot.png";
 
 const features = [
   {
     icon: CheckCircle2,
     title: "Track daily habits",
-    desc: "One-click check-offs with progress rings, streaks and a 90-day heatmap.",
+    desc: "Show up. The rest follows."
   },
   {
     icon: Brain,
     title: "Weekly insights",
-    desc: "Personalised reports on what worked, what struggled, and what to try next.",
+    desc: "The answers are in the patterns.",
   },
   {
     icon: Flame,
     title: "Streak recovery coach",
-    desc: "When streaks break, AI generates a gentle 3-day comeback plan.",
+    desc: "Consistency is forgiving.",
   },
   {
     icon: BarChart3,
     title: "Progress statistics",
-    desc: "See patterns across days, weeks, categories — with an AI chat built-in.",
+    desc: "See how far you've come.",
   },
 ];
 
@@ -45,12 +47,16 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen">
-      <header className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+    <header className="max-w-6xl mx-auto px-6 pt-8 pb-5 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
-            <Sparkles size={18} />
-          </div>
-          <span className="font-semibold text-lg">AI Habit Tracker</span>
+    <div className="flex items-center gap-2 mt-4 translate-y-5">
+  <img
+    src={logos}
+    alt="AI Habit Tracker"
+    className="w-85 h-auto object-contain"
+  />
+</div>
+          <span className="font-semibold text-lg"></span>
         </div>
         <nav className="flex items-center gap-2">
           <button
@@ -69,8 +75,8 @@ export default function Landing() {
         </nav>
       </header>
 
-      <section className="max-w-6xl mx-auto px-6 pt-10 md:pt-16 pb-16">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+      <section className="max-w-6xl mx-auto px-6 pt-8 md:pt-12 pb-10">
+       <div className="grid lg:grid-cols-12 gap-8 lg:gap-4 items-center">
           <div className="lg:col-span-8 text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center gap-1.5 chip mb-5 bg-brand-500/15 text-brand-700 dark:text-brand-300">
               <Sparkles size={12} />
@@ -86,14 +92,14 @@ export default function Landing() {
               </span>
               .
             </h1>
-            <p className="mt-5 text-soft text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="mt-4 text-soft text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
               Track your habits, watch your streaks grow, and let AI turn your
               data into real encouragement,  
                <span className="bg-gradient-to-br from-brand-400 to-brand-700 bg-clip-text text-transparent">
                  _not generic motivation.
               </span>
             </p>
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
+            <div className="mt-6 flex items-center justify-center lg:justify-start gap-3">
               <Link to="/register" className="btn-primary px-5 py-3 text-base">
                 Create Account
                 <ArrowRight size={16} />
@@ -104,7 +110,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <div className="lg:col-span-4 order-1 lg:order-2 flex justify-center lg:-mr-36">
+          <div className="lg:col-span-4 order-1 lg:order-2 flex justify-center lg:-mr-26">
             <OrbitingHabits />
           </div>
         </div>
@@ -183,8 +189,8 @@ export default function Landing() {
         </div>
       </section> */}
 
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t divider">
-        <div className="text-center max-w-2xl mx-auto mb-10">
+      <section className="max-w-6xl mx-auto px-6 py-12 border-t divider">
+      <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
             Everything you need, nothing you don't
           </h2>
@@ -192,7 +198,7 @@ export default function Landing() {
            Time changes everyone. Habits decide how.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {features.map((f) => (
             <div key={f.title} className="card p-5">
               <div className="w-10 h-10 rounded-xl bg-brand-500/15 text-brand-600 dark:text-brand-300 flex items-center justify-center mb-3">
@@ -206,9 +212,8 @@ export default function Landing() {
           ))}
         </div>
       </section>
-
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="relative p-10 text-center rounded-2xl overflow-hidden bg-gradient-to-br from-brand-600 to-brand-900 text-white shadow-2xl shadow-brand-500/30">
+<section className="max-w-6xl mx-auto px-6 py-12">
+        <div className="relative p-8 text-center rounded-2xl overflow-hidden bg-gradient-to-br from-brand-600 to-brand-900 text-white shadow-2xl shadow-brand-500/30">
           <div
             className="absolute inset-0 pointer-events-none opacity-50"
             style={{
@@ -239,7 +244,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <footer className="max-w-6xl mx-auto px-6 py-8 text-center text-xs text-faint border-t divider">
+      <footer className="max-w-6xl mx-auto px-6 py-6 text-center text-xs text-faint border-t divider">
         Built with MERN · AI Habit Tracker © {new Date().getFullYear()}
       </footer>
     </div>

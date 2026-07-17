@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Sparkles, Sun, Moon } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
+import logos from "../assets/logot.png";
 
 export default function Register() {
   const { user, register } = useAuth();
@@ -49,10 +50,11 @@ export default function Register() {
           to="/"
           className="flex items-center justify-center gap-2 mb-6"
         >
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
-            <Sparkles size={18} />
-          </div>
-          <span className="font-semibold text-lg">AI Habit Tracker</span>
+      <img
+                   src={logos}
+                   alt="AI Habit Tracker"
+                   className="w-50 h-auto object-contain"
+                 />
         </Link>
 
         <div className="card p-7">
