@@ -116,79 +116,6 @@ export default function Landing() {
         </div>
         </section>
 
-        {/* <div className="mt-14 md:mt-20 grid md:grid-cols-2 gap-6">
-          <div className="card p-6 relative overflow-hidden">
-            <div className="text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300 mb-2">
-              Today
-            </div>
-            <div className="space-y-3">
-              {[
-                { icon: "💧", name: "Drink 2L water", done: true, streak: 12 },
-                { icon: "📚", name: "Read 20 minutes", done: true, streak: 7 },
-                { icon: "🏃", name: "Morning run", done: false, streak: 3 },
-              ].map((h, i) => (
-                <div
-                  key={i}
-                  className={`flex items-center gap-3 rounded-xl glass p-3 ${h.done ? "ring-1 ring-brand-500/30" : ""
-                    }`}
-                >
-                  <span className="w-9 h-9 rounded-lg bg-brand-500/15 flex items-center justify-center">
-                    {h.icon}
-                  </span>
-                  <div className="flex-1 text-sm font-medium">{h.name}</div>
-                  <div className="flex items-center gap-1 text-xs text-muted">
-                    <Flame size={12} className="text-orange-500" />
-                    {h.streak}
-                  </div>
-                  <div
-                    className={`w-7 h-7 rounded-full flex items-center justify-center ${h.done
-                      ? "bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-md shadow-brand-500/30"
-                      : "border-2 border-[var(--surface-border)]"
-                      }`}
-                  >
-                    {h.done && <CheckCircle2 size={14} />}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="card p-6 relative overflow-hidden">
-            <div
-              className="absolute inset-0 pointer-events-none opacity-60"
-              style={{
-                background:
-                  "radial-gradient(circle at 0% 0%, rgba(99,102,241,0.22), transparent 55%)",
-              }}
-            />
-            <div className="relative">
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-300 mb-2">
-                <Sparkles size={12} />
-              Weekly Summary
-              </div>
-              <p className="text-sm leading-relaxed">
-                Big week for hydration — 7/7 on <b>Drink 2L water</b>! Your
-                morning runs slipped to 3/5 on weekdays. Consistency pattern:
-                you're strongest Mon–Wed. Try prepping shoes by the door tonight
-                to protect tomorrow's momentum. Proud of you.
-              </p>
-              <div className="mt-6 grid grid-cols-3 gap-3">
-                {[
-                  { label: "Streaks", value: "4" },
-                  { label: "This week", value: "86%" },
-                  { label: "Best ever", value: "28d" },
-                ].map((s) => (
-                  <div key={s.label} className="glass rounded-xl p-3">
-                    <div className="text-lg font-semibold">{s.value}</div>
-                    <div className="text-xs text-muted">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="max-w-6xl mx-auto px-6 py-12 border-t divider">
       <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
@@ -222,11 +149,7 @@ export default function Landing() {
             }}
           />
           <div className="relative">
-            {/* <div className="flex items-center justify-center gap-2 mb-3">
-              <Target size={18} />
-              <Activity size={18} />
-              <Sparkles size={18} />
-            </div> */}
+            
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
               Your first streak is 3 clicks away.
             </h2>
