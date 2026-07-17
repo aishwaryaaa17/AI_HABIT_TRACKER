@@ -16,7 +16,8 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import Modal from "./Modal.jsx";
 import api from "../api/axios.js";
-import logos from "../assets/logot.png";
+import logo from "../assets/logodark.jpeg";
+import logos from "../assets/logolight.jpeg";
 
 
 const nav = [
@@ -51,12 +52,12 @@ export default function Sidebar() {
 
   return (
     <aside className="hidden md:flex md:flex-col w-64 fixed inset-y-0 left-0 z-30 glass border-r">
-      <div className="px-6 py-6 border-b divider">
+      <div className="px-7 py-1 border-b divider">
   <div>
-    <img
-       src={logos}
+   <img
+       src={theme === "dark" ? logo : logos}
        alt="AI Habit Tracker"
-       className="w-40 h-auto object-contain"
+       className="w-30 h-auto object-contain"
      />
 
     <p className="text-xs text-faint mt-1">

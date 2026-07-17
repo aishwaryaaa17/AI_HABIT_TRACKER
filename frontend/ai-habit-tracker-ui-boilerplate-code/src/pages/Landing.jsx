@@ -14,8 +14,8 @@ import {
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import OrbitingHabits from "../components/OrbitingHabits.jsx";
-import logo from "../assets/logooo.png";
-import logos from "../assets/logot.png";
+import logo from "../assets/logodark.jpeg";
+import logos from "../assets/logolight.jpeg";
 
 const features = [
   {
@@ -50,11 +50,13 @@ export default function Landing() {
     <header className="max-w-6xl mx-auto px-6 pt-8 pb-5 flex items-center justify-between">
         <div className="flex items-center gap-2">
     <div className="flex items-center gap-2 mt-4 translate-y-5">
+  <div className="flex items-center gap-2 mt-4 translate-y-5">
   <img
-    src={logos}
+    src={theme === "dark" ? logo : logos}
     alt="AI Habit Tracker"
-    className="w-85 h-auto object-contain"
+    className="w-60 h-auto object-contain"
   />
+</div>
 </div>
           <span className="font-semibold text-lg"></span>
         </div>

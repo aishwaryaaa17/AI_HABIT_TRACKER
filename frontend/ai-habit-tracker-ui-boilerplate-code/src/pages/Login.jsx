@@ -3,7 +3,8 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { Sparkles, Sun, Moon } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
-import logos from "../assets/logot.png";
+import logo from "../assets/logodark.jpeg";
+import logos from "../assets/logolight.jpeg";
 
 export default function Login() {
   const { user, login } = useAuth();
@@ -45,10 +46,10 @@ export default function Login() {
         <Link
           to="/"
           className="flex items-center justify-center gap-2 mb-6">
-          <img
-             src={logos}
+         <img
+             src={theme === "dark" ? logo : logos}
              alt="AI Habit Tracker"
-             className="w-50 h-auto object-contain"
+             className="w-40 h-auto object-contain"
            />
          
         </Link>
