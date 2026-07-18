@@ -59,11 +59,13 @@ export const chatCompletion = async({
             content: (res.text || "").trim(),
         };
     } catch (err) {
-        console.error("AI error:", err.message);
+        console.error("========== GEMINI ERROR ==========");
+        console.error(err);
+        console.error("=================================");
 
         return {
             ok: false,
-            content: "AI request failed. Please try again later.",
+            content: err.message,
         };
     }
 };
