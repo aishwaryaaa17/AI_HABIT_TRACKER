@@ -18,6 +18,7 @@ const allowedOrigins = (process.env.CLIENT_URL || "")
     .map((s) => s.trim())
     .filter(Boolean);
 
+
 const corsOptions = {
     origin(origin, cb) {
         if (!origin) return cb(null, true);
